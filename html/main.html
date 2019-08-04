@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Dap</title>
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick/slick-theme.css">
+	 <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  
+	<link rel="stylesheet" type="text/css" href="libs/slick/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="style/header.css">
+	<link rel="stylesheet" type="text/css" href="style/mainstyle.css">
+</head>
+<body>
+	<div id="all" style="width: 100%; height: 970px; position: relative;">
+		<header>
+			<div id="logo">
+				<a href="#"><img src="img/logo.png" alt="logo"></a>
+			</div>
+			<nav>
+				<ul class="menu">
+					<li><a href="subindex.html" data-hober="인디게임">인디게임</a></li>
+					<li><a href="#" data-hober="PC">&nbsp&nbsp&nbsp&nbspPC&nbsp&nbsp&nbsp&nbsp</a></li>
+					<li><a href="#" data-hober="PS4">&nbsp&nbsp&nbspPS4&nbsp&nbsp&nbsp</a></li>
+					<li><a href="#" data-hober="WII">&nbsp&nbsp&nbspWII&nbsp&nbsp&nbsp</a></li>
+				</ul>
+			</nav>
+			
+			<div>
+					<form>
+				  	<fieldset>
+				    <input type="search" id="search" />
+				    <button type="submit" id="serbtn">
+				      <!-- <i class="fa fa-search"></i> -->
+				      <img src="icon.png" alt="png">
+				    </button>
+				    </fieldset>
+				    </form>
+				<br>
+				<button type="button" class="btn">로그인</button>
+				<button type="button" class="btn">회원가입</button>
+			</div>
+		</header>
+			<div class="slidebox">
+    			<ul class="slide">
+        			<li style="">
+						<video  autoplay loop class="video" id="video1">
+							<source src="video/video1.mp4" type="video/mp4">
+						</video>
+        			</li>
+       				 <li style="">
+        				<video   loop class="video" id="video2">
+							<source src="video/video2.mp4" type="video/mp4">
+						</video>
+        			</li>
+        			<li style="">
+        				<video  loop class="video" id="video3"y>
+							<source src="video/video3_1.mp4" type="video/mp4">
+						</video>
+       				 </li>
+       				 <li >
+        				<video  loop class="video" id="video4">
+							<source src="video/video4.mp4" type="video/mp4">
+						</video>
+        			</li>
+ 
+    			</ul>
+    			<div id="slidebutton">
+			<button type="button" id="leftbtn"><<<<<</button>
+			<button type="button" id="rightbtn">>>>>>></button>
+			</div>
+					<div id="buttonclick">
+						<ul class="slidectrl">
+    						<li class="slidepos">
+       							 <button type="button" id="bt1" class="check">1</button>
+      							 <button type="button" id="bt2" class="check">2</button>
+       							 <button type="button" class="check" id="bt3">3</button>
+        						<button type="button" class="check" id="bt4">4</button>
+    						</li>
+						</ul>
+					</div>
+			</div>
+			
+		<div id="remocon">
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="script/jquery-1.12.3.js"></script>
+<script type="text/javascript">
+
+
+	var idx = 0;
+	var slidemax = 3;
+	var pos = 1700;
+$("#bt1").addClass("aa");
+	function sliding(add)
+	{
+		var video1 = $("#video1");
+		var video2 = $("#video2");
+		var video3 = $("#video3");
+		var video4 = $("#video4");
+		idx = idx + add;
+		if(idx < 0) idx = slidemax;
+		else if(idx > slidemax) idx = 0;
+		$(".slide").stop().animate({'left':-(idx*pos)+"px"},"slow");
+		if(idx == 0)
+		{
+			$(".check").removeClass("aa");
+			$("#bt1").addClass("aa");
+			video2[0].pause();
+			video3[0].pause();
+			video4[0].pause();
+			video1[0].play();
+		}else if(idx == 1){
+			$(".check").removeClass("aa");
+			$("#bt2").addClass("aa");
+			video1[0].pause();
+			video2[0].pause();
+			video3[0].pause();
+			video2[0].play();
+			
+		}else if(idx == 2)
+		{
+			$(".check").removeClass("aa");
+			$("#bt3").addClass("aa");
+			video1[0].pause();
+			video2[0].pause();
+			video4[0].pause();
+			video3[0].play();
+		}else if(idx == 3)
+		{
+			$(".check").removeClass("aa");
+			$("#bt4").addClass("aa");
+			video1[0].pause();
+			video2[0].pause();
+			video3[0].pause();
+			video4[0].play();
+		}
+	}
+autoslide = setInterval(function() { sliding(1) }, 7000);
+	// function after() {
+ //        setTimeout(function() {
+ //            // clearInterval(autoslide);  
+ //            autoslide = setInterval(function() { sliding(1) }, 7000);
+ //        }, 7000);
+ //    }
+     
+    $('#leftbtn, #rightbtn').click(function() {
+        // clearInterval(autoslide);  
+        if($(this).attr('id') == "leftbtn") sliding(-1);
+        else sliding(1);
+        // after();
+    });
+    $('.slidepos > button').click(function() {
+        // clearInterval(autoslide);  
+        idx = $(this).index(); 
+        sliding(0);
+        // after();
+    });
+</script>
+</html>

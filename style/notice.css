@@ -1,0 +1,295 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	color: black;
+}
+body{
+	width: 1200px;
+	height: 890px;
+	overflow: hidden;
+}
+.all{
+	width: 100%;
+	height: 100%;
+	background: #E7E7E7;
+}
+.top{
+	width: 100%;
+	height: 5%;
+	background: #100D10;
+}
+.title{
+	width: 80%;
+	height: 100%;
+}
+.notice_body{
+	width: 100%;
+	height: 95%;
+}
+.bottom{
+	width: 100;
+	height: 5%;
+	background: #100D10;
+}
+.top_title{
+	width: 100%;
+	height: 12%;
+	/*background: green;*/
+}
+.top_title > h1{
+	text-align: center;
+	color: black;
+	position: relative;
+	top: 15px;
+	font-size: 50px;
+}
+.top_input{
+	width: 100%;
+	height: 16%;
+	/*background: blue;*/
+}
+.top_input_wrap{
+	width: 80%;
+	height: 75%;
+	background: rgba(0,0,0,0);
+	margin-left: 10%;
+	box-sizing: border-box;
+	border:15px solid #8E8E8E;
+	position: relative;
+	top: 5%;
+}
+
+.input_wrap_logo{
+	width: 30%;
+	box-sizing: border-box;
+	border-right: 2px solid black;
+	height: 80%;
+	/*margin-top: 5%;*/
+	float: left;
+	position: relative;
+	top: 10%;
+}
+.input_wrap_logo_right{
+	float: right;
+	height: 100%;
+	/*background: red;*/
+	width: 40%;
+}
+.logo_right_he{
+	width: 100%;
+	height: 50%;
+	/*background: blue;*/
+}
+.logo_right_he > h4{
+	text-align: center;
+	font-size: 18px;
+}
+.input_wrap_logo_right > img{
+	width: 40%;
+	height: 100%;
+	float: right;
+	margin-right: 5%;
+}
+/*.input_wrap_logo > img{
+	width: 40%;
+	height: 80%;
+	float: right;
+	position: relative;
+	top: 5%;
+}*/
+.input_this{
+	width: 65%;
+	float: left;height: 100%;
+	/*background: green;*/
+}
+.input_this > form{
+	width: 100%;
+	height: 100%;
+}
+.input_this > form > input{
+	width: 50%;
+	box-sizing: border-box;
+	border: none;
+	background: none;
+	border-bottom: 2px solid black;
+	margin-left: 20px;
+	position: relative;
+	top: 15px;
+	height:50%;
+}
+.input_this > form > button{
+	width: 15%;
+	height: 50%;
+	position: relative;
+	top: 15px;
+	border: none;
+	background: black;
+	color:white;
+}
+.notice_table{
+	width: 100%;
+	height: 72%;
+	/*background: red;*/
+}
+.notice_div{
+	width: 80%;
+	height: 90%;
+	/*background: green;*/
+	margin: 0 auto;
+}
+.notice_div > table{
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+	border-top: 2px solid black;
+	/*border-bottom: 1px solid black;*/
+	table-layout: fixed;
+}
+.good>th{
+	border-bottom: 1px solid black;
+}
+.notice_tr > td{
+	height: 50px;
+}
+tr > td{
+	text-align: center;
+}
+.notice_aaa{
+	width: 100%;
+	height: 100%;
+	/*background: red;*/
+}
+.tda{
+	width: 100%;
+	height: 50px;
+}
+.tda > .num{
+	width: 70px;
+	height: 100%;
+	float: left;
+	/*background: green;*/
+}
+.tda>.text{
+	width: 41.8%;
+	height: 50px;
+	float: left;
+	/*background: blue;*/
+}
+.tda > .title,.tda>.date,.tda>.bhit{
+	width: 16.9%;
+	height: 50px;
+	float: left;
+}
+.tda *{
+	text-align: center;
+	line-height: 50px;
+}
+.numbers{
+	width: 100%;
+	height: 10%;
+	/*background: red;*/
+}
+.prev_div{
+	width: 20%;
+	height: 100%;
+	float: left;
+	/*background: green;*/
+}
+.prev_a{
+	border: 2px solid black;
+	box-sizing: border-box;
+	float: right;
+	margin-right: 10px;
+	padding: 5px;
+	position: relative;
+	top: 7px;
+}
+.next_a{
+	border: 2px solid black;
+	box-sizing: border-box;
+	float: left;
+	margin-left: 10px;
+	padding: 5px;
+	position: relative;
+	top: 7px;
+}
+.block_div{
+	width: 60%;
+	height: 100%;
+	/*background: blue;*/
+	float: left;
+}
+.next_div{
+	width: 20%;
+	height: 100%;
+	float: right;
+	/*background: green;*/
+}
+.num_div{
+	/*background: red;*/
+	margin: 0 auto;
+/*	width: intrinsic;
+	height: intrinsic;*/
+	width: 80px;
+	height: inherit;
+}
+.a_block{
+	border: 2px solid black;
+	box-sizing: border-box;
+	float: left;
+	/*margin-left: 10px;*/
+	padding: 5px;
+	position: relative;
+	text-align: center;
+	margin-left: 10px;
+	top: 7px;
+}
+.top_title_wrap{
+	width: 30%;
+	height: 100%;
+	margin:0 auto;
+	/*background: red;*/
+}
+.back{
+ 	height: 100%;
+ 	width: 20%;
+ 	/*background: blue;*/
+ 	float: left;
+}
+.back > img{
+	width: 25px;
+	height: 40px;
+	float: right;
+	position: relative;
+	margin-right: 10px;
+	top: 30px;
+	cursor: pointer;
+}
+.go{
+ 	height: 100%;
+ 	width: 20%;
+ 	/*background: blue;*/
+ 	float: left;
+}
+.go > img{
+	width: 25px;
+	height: 40px;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	top: 30px;
+	cursor: pointer;
+}
+.top_wrap_title{
+	width: 60%;
+	height: 100%;
+	/*background: pink;*/
+	float:left;
+}
+.top_wrap_title > h1{
+	text-align: center;
+	line-height: 100px;
+	font-size: 40px;
+}

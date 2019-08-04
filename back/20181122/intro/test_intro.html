@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dap</title>
+	<link rel="stylesheet" type="text/css" href="full-page-scroll.css">
+	<link rel="stylesheet" type="text/css" href="intro.css">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<header>
+		<div id="left">
+				<img src="logo.png" alt="logo">
+		</div>
+		<div id="right">
+			<div id="he_wrap">
+			<button id="todaynot">오늘하루그만보기</button>
+			<button id="gotohomepage">홈페이지바로가기</button>
+			</div>
+			
+		</div>
+	</header>
+	<div id="main" class="scroll-container">
+		<section class="section1">
+			<img src="img/inde.jpg" alt="img1" style="margin-top: 100px;">
+			<div class="left_info left1">
+					<h1>Inde</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div id="hover1" class="hover">
+				<button id="info1" class="btn">더 알아보기</button>
+			</div>
+			<div class="right_info right1">
+					<h1>Inde</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div id="scroll">
+					<div id="arrow">
+					</div>
+				</div>
+		</section>
+		<section class="section2">
+			<img src="img/pc.jpg" alt="img2">
+			<div class="left_info info_two left2">
+					<h1>PC</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div id="hover2" class="hover">
+				<button id="info2" class="btn">더 알아보기</button>
+			</div>
+			<div class="right_info right2">
+					<h1>PC</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+		</section>
+		<section class="section3">
+			<img src="img/ps4.jpg" alt="img3">
+			<div class="left_info info_two left3">
+					<h1>PS4</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div id="hover3" class="hover">
+				<button id="info3" class="btn">더 알아보기</button>
+			</div>
+			<div class="right_info right3">
+					<h1>PS4</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+		</section>
+		<section class="section4">
+			<img src="img/wii.jpg" alt="img3">
+			<div class="left_info info_two left4">
+					<h1>WII</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div id="hover4" class="hover">
+				<button id="info4" class="btn">더 알아보기</button>
+			</div>
+			<div class="right_info right4">
+					<h1>WII</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+		</section>
+	</div>
+</body>
+	<script type="text/javascript" src="jquery-1.12.3.js"></script>
+	<script src="full-page-scroll.js"></script>
+	<script type="text/javascript">
+
+		new fullScroll({
+displayDots: true,
+			dotsPosition: 'left',
+			animateTime: 0.7,
+			animateFunction: 'ease'
+	});
+		$("#hover1").click(function(){
+			location.href="../subindex.php?title=1"
+		});
+		$("#hover2").click(function(){
+			location.href="../subindex.php?title=2"
+		});
+		$("#hover3").click(function(){
+			location.href="../subindex.php?title=3"
+		});
+		$("#hover4").click(function(){
+			location.href="../subindex.php?title=4"
+		});
+
+
+
+		
+		// $(".right_info").hide();
+		// $(".left_info").hide();
+		$("#hover1").mouseover(function(){
+				// $("#hover1 > #info1").stop().fadeIn().queue(function(){
+				// 	$(".left1").stop().fadeIn().queue(function(){
+				// 		$(".right1").stop().fadeIn()
+				// 	});
+				// });
+				$(".left1").stop().animate({
+					opacity: "1",
+					left:300
+				},300).queue(function(){
+					$(".right1").stop().animate({
+						opacity:"1",
+						left:1300
+					},300).queue(function(){
+						$("#hover1 > #info1").stop().animate({
+							opacity:"1",
+							top:125
+						},300);
+					});
+				});
+		});
+		$("#hover1").mouseleave(function()
+		{
+			// $(".right1").stop().fadeOut().queue(function(){
+			// 	$(".left1").stop().fadeOut().queue(function(){
+			// 		$("#hover1 > #info1").stop().fadeOut();
+			// 	});;
+			// });
+			$(".left1").stop().animate({
+					opacity: "0",
+					left:350
+				},300).queue(function(){
+					$(".right1").stop().animate({
+						opacity:"0",
+						left:1350
+					},300).queue(function(){
+						$("#hover1 > #info1").stop().animate({
+							opacity:"0",
+							top:150
+						},300);
+					});;
+				});
+		});
+
+
+
+		$("#hover2").mouseover(function(){
+				$(".left2").stop().animate({
+					opacity: "1",
+					left:300
+				},300).queue(function(){
+					$(".right2").stop().animate({
+						opacity:"1",
+						left:1300
+					},300).queue(function(){
+						$("#hover2 > #info2").stop().animate({
+							opacity:"1",
+							top:125
+						},300);
+					});
+				});
+		});
+		$("#hover2").mouseleave(function()
+		{
+			$(".left2").stop().animate({
+					opacity: "0",
+					left:350
+				},300).queue(function(){
+					$(".right2").stop().animate({
+						opacity:"0",
+						left:1350
+					},300).queue(function(){
+						$("#hover2 > #info2").stop().animate({
+							opacity:"0",
+							top:150
+						},300);
+					});;
+				});
+		});
+
+
+		$("#hover3").mouseover(function(){
+				$(".left3").stop().animate({
+					opacity: "1",
+					left:300
+				},300).queue(function(){
+					$(".right3").stop().animate({
+						opacity:"1",
+						left:1300
+					},300).queue(function(){
+						$("#hover3 > #info3").stop().animate({
+							opacity:"1",
+							top:125
+						},300);
+					});
+				});
+		});
+		$("#hover3").mouseleave(function()
+		{
+			$(".left3").stop().animate({
+					opacity: "0",
+					left:350
+				},300).queue(function(){
+					$(".right3").stop().animate({
+						opacity:"0",
+						left:1350
+					},300).queue(function(){
+						$("#hover3 > #info3").stop().animate({
+							opacity:"0",
+							top:150
+						},300);
+					});;
+				});
+		});
+
+		$("#hover4").mouseover(function(){
+				$(".left4").stop().animate({
+					opacity: "1",
+					left:300
+				},300).queue(function(){
+					$(".right4").stop().animate({
+						opacity:"1",
+						left:1300
+					},300).queue(function(){
+						$("#hover4 > #info4").stop().animate({
+							opacity:"1",
+							top:125
+						},300);
+					});
+				});
+		});
+		$("#hover4").mouseleave(function()
+		{
+			$(".left4").stop().animate({
+					opacity: "0",
+					left:350
+				},300).queue(function(){
+					$(".right4").stop().animate({
+						opacity:"0",
+						left:1350
+					},300).queue(function(){
+						$("#hover4 > #info4").stop().animate({
+							opacity:"0",
+							top:150
+						},300);
+					});;
+				});
+		});
+
+
+
+
+
+	// 	$("#hover2").mouseover(function(){
+	// 			$("#hover2 > #info2").stop().fadeIn().queue(function(){
+	// 				$(".left2").stop().fadeIn().queue(function(){
+	// 					$(".right2").stop().fadeIn()
+	// 				});
+	// 			});
+	// 	});
+	// 	$("#hover2").mouseleave(function()
+	// 	{
+	// 		$(".right2").stop().fadeOut().queue(function(){
+	// 			$(".left2").stop().fadeOut().queue(function(){
+	// 				$("#hover2 > #info2").stop().fadeOut();
+	// 			});;
+	// 		});
+	// 	});
+
+
+	// $("#hover3").mouseover(function(){
+	// 			$("#hover3 > #info3").stop().fadeIn().queue(function(){
+	// 				$(".left3").stop().fadeIn().queue(function(){
+	// 					$(".right3").stop().fadeIn()
+	// 				});
+	// 			});
+	// 	});
+	// 	$("#hover3").mouseleave(function()
+	// 	{
+	// 		$(".right3").stop().fadeOut().queue(function(){
+	// 			$(".left3").stop().fadeOut().queue(function(){
+	// 				$("#hover3 > #info3").stop().fadeOut();
+	// 			});;
+	// 		});
+	// 	});
+
+	// 	$("#hover4").mouseover(function(){
+	// 			$("#hover4 > #info4").stop().fadeIn().queue(function(){
+	// 				$(".left4").stop().fadeIn().queue(function(){
+	// 					$(".right4").stop().fadeIn()
+	// 				});
+	// 			});
+	// 	});
+	// 	$("#hover4").mouseleave(function()
+	// 	{
+	// 		$(".right4").stop().fadeOut().queue(function(){
+	// 			$(".left4").stop().fadeOut().queue(function(){
+	// 				$("#hover4 > #info4").stop().fadeOut();
+	// 			});;
+	// 		});
+	// 	});
+
+
+$("#todaynot").click(function(){
+	setCookie("myHobby","game",'1');
+		location.href="../index.php";
+});
+$("#gotohomepage").click(function(){
+location.href="../index.php";
+});
+if(getCookie("myHobby") == "game")
+{
+	location.href="../index.php"
+}else{
+	
+}
+function setCookie(cookie_name,value,days)
+{
+	var exdate = new Date();
+	exdate.setDate(exdate.getDate()+days);
+	 var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());
+	 document.cookie = cookie_name + '='+cookie_value;
+}
+function getCookie(cookie_name) 
+{ 
+    var x,y;
+    var val = document.cookie.split(';');
+
+    for(var i=0;i<val.length;i++)
+    {
+    	x = val[i].substr(0,val[i].indexOf('='));
+    	y = val[i].substr(val[i].indexOf('=')+1);
+    	x = x.replace(/^\s+|\s+$/g, '');
+    	if(x == cookie_name)
+    	{
+    		return unescape(y);
+    	}
+
+    } 
+}
+	</script>
+</html>

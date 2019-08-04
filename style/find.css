@@ -1,0 +1,115 @@
+.find
+{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  background: rgba(255,255,255,0.4);
+}
+.find_wrap{
+  width: 23%;
+  height: 58%;
+  
+  margin: auto auto;
+  margin-top: 8%;
+  background: #E6E6E5;
+}
+.find_title{
+  width: 100%;
+  height: 20%;
+  /*background: red;*/
+}
+.find_title > h1{
+  text-align: center;
+  position: relative;
+  top:20px;
+}
+.find_input{
+  width: 80%;
+  height: 50%;
+  /*background: red;*/
+  margin-left: 10%;
+}
+.input_body{
+  width: 100%;
+  height: 30%;
+  /*background: blue;*/
+  margin-top: 30px;
+}
+.pw_int{
+  margin-top: 0;
+}
+.input_body > .find_title{
+  font-size: 20px;
+  margin-left: 5px;
+}
+.input_body > input{
+      width: 100%;
+  height: 35px;
+  margin-top: 10px;
+  font-size: 16px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  border:#CC3030 1px solid;
+  outline:none;
+  /*padding: 2px;*/
+  /*border-radius: 5px;*/
+  /*margin: 2px;*/
+  border:1px solid #EE781A;
+}
+.input_body > input:focus{
+  box-shadow: 0 0 5px 2px #EE781A;
+  -webkit-box-shadow: 0 0 5px 2px #EE781A;
+  -moz-box-shadow: 0 0 5px 2px #EE781A;
+  -o-box-shadow: 0 0 5px 2px #EE781A;
+  -ms-box-shadow: 0 0 5px 2px #EE781A;
+  transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  border:1px solid #EE781A;
+}
+.find_more{
+  width: 100%;
+  height: 30%;
+    position: relative;
+  top: -30px;
+  /*background: red;*/
+}
+.more_top{
+  width: 100%;
+  height: 30%;
+  /*background: blue;*/
+}
+.more_top > h4{
+    text-align: center;
+  position: relative;
+  top: 15px;
+}
+.more_bottom{
+  width: 100%;
+  height: 70%;
+
+  /*background: green;*/
+}
+.bottom_wrap{
+  width: 60%;
+  /*background-color:skyblue;*/
+  height: 100%;
+  margin: 0 auto;
+
+}
+#find_pw_body{
+  /*display: block;*/
+}
+.pw_int{
+  margin-top: -10px;
+  top: 0;
+}
+.find_pw_more{
+  top: 30px;
+}

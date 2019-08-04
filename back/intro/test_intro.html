@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dap</title>
+	<link rel="stylesheet" type="text/css" href="full-page-scroll.css">
+	<link rel="stylesheet" type="text/css" href="intro.css">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<header>
+		<div id="left">
+				<img src="logo.png" alt="logo">
+		</div>
+		<div id="right">
+			<div id="he_wrap">
+			<button id="todaynot">오늘하루그만보기</button>
+			<button id="gotohomepage">홈페이지바로가기</button>
+			</div>
+			
+		</div>
+	</header>
+	<div id="main" class="scroll-container">
+		<section class="section1">
+			<img src="img/inde.jpg" alt="img1">
+			<div class="left_info">
+					<h1>PC</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div id="hover">
+				<button id="info">더 알아보기</button>
+			</div>
+			<div class="right_info">
+					<h1>PC</h1>
+					<p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem Ipsum <br>has been the industry's standard dummy text ever since the 1500s</p>
+			</div>
+			<div id="scroll">
+					<div id="arrow">
+					</div>
+				</div>
+		</section>
+		<section class="section2">
+			<img src="img/pc.jpg" alt="img2">
+		</section>
+		<section class="section3">
+			<img src="img/ps4.jpg" alt="img3">
+		</section>
+		<section class="section4">
+			<img src="img/wii.jpg" alt="img3">
+		</section>
+	</div>
+</body>
+	<script type="text/javascript" src="jquery-1.12.3.js"></script>
+	<script src="full-page-scroll.js"></script>
+	<script type="text/javascript">
+		new fullScroll({
+displayDots: true,
+			dotsPosition: 'left',
+			animateTime: 0.7,
+			animateFunction: 'ease'
+	});
+		$("#hover > #info").hide();
+		$(".right_info").hide();
+		$(".left_info").hide();
+		$("#hover").mouseover(function(){
+				$("#hover > #info").stop().fadeIn().queue(function(){
+					$(".left_info").stop().fadeIn().queue(function(){
+						$(".right_info").stop().fadeIn()
+					});
+				});
+		});
+		$("#hover").mouseleave(function()
+		{
+			$(".right_info").stop().fadeOut().queue(function(){
+				$(".left_info").stop().fadeOut().queue(function(){
+					$("#hover > #info").stop().fadeOut();
+				});;
+			});
+		});
+
+$("#todaynot").click(function(){
+	setCookie("myHobby","game",'1');
+		location.href="../index.php";
+});
+$("#gotohomepage").click(function(){
+location.href="../index.php";
+});
+if(getCookie("myHobby") == "game")
+{
+	location.href="../index.php"
+}else{
+	
+}
+function setCookie(cookie_name,value,days)
+{
+	var exdate = new Date();
+	exdate.setDate(exdate.getDate()+days);
+	 var cookie_value = escape(value) + ((days == null) ? '' : ';    expires=' + exdate.toUTCString());
+	 document.cookie = cookie_name + '='+cookie_value;
+}
+function getCookie(cookie_name) 
+{ 
+    var x,y;
+    var val = document.cookie.split(';');
+
+    for(var i=0;i<val.length;i++)
+    {
+    	x = val[i].substr(0,val[i].indexOf('='));
+    	y = val[i].substr(val[i].indexOf('=')+1);
+    	x = x.replace(/^\s+|\s+$/g, '');
+    	if(x == cookie_name)
+    	{
+    		return unescape(y);
+    	}
+
+    } 
+}
+	</script>
+</html>

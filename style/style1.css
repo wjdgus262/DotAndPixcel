@@ -1,0 +1,393 @@
+@charset "utf-8";
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	color: white;
+	font-family: "Myriad Pro";
+}
+/*footer{
+	width: 100%;
+	height: 200px;
+	background-color: red;
+	left: 0;
+	position: absolute;
+}*/
+#all{
+	min-width: 1600px;
+	position: relative;
+
+}
+#content{
+	width: 87%;
+	height: 785px;
+	position: relative;
+	/*background: red;*/
+
+}
+#content > #back{
+	width: 100%;
+	height: inherit;
+	position: relative;
+	left: 0;
+	top: 0;
+	background: black;
+	z-index: 1;
+}
+#content > #back > img{
+	width: 80%;
+	height: inherit;
+	position: absolute;
+	left: 20%;
+	top: 0;
+}
+#slide{
+	width: 68%;
+	height:	350px;
+	background: gray; 
+	position: absolute;
+	left: 32%;
+	top: 30%;
+	z-index: 2;
+	background: #DDE0E5;
+	overflow:hidden;
+}
+#content > #front{
+	z-index: 3;
+				-webkit-transform: skew(-26deg);
+			-moz-transform:skew(-26deg);
+			-o-transform:skew(-26deg);
+	width: 60%;
+	height: inherit;
+		position: absolute;
+	left: -22%;
+	top: 0;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cc6632+62,dbdc43+100 */
+background: #cc6632; /* Old browsers */
+background: -moz-linear-gradient(left, #cc6632 45%, #dbdc43 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #cc6632 45%,#dbdc43 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #cc6632 45%,#dbdc43 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc6632', endColorstr='#dbdc43',GradientType=1 ); /* IE6-9 */
+}
+#finfo{
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	top: 18%;
+	left: 3%;
+	z-index: 5;
+	/*background: red;*/
+}
+#finfo > h1{
+	color: white;
+}
+#finfo > a > img{
+	width: 44%;
+	height: 75px;
+	margin-top: 20px;
+	float: left;
+}
+#finfo > h3{
+	float: left;
+	color: white;
+	margin-left: 20px;
+	margin-top: 50px;
+}
+#finfo > #hinfo
+{
+	clear: both;
+	margin-left: 0px;
+	margin-top: 20px;
+}
+/*section{
+	width: inherit;
+	height: 155px;
+}
+*/
+#content>section{
+	width: 100%;
+	height: 1400px;
+}
+article{
+	width: 100%;
+	height: 1250px;
+	position: relative;
+
+}
+.tap{
+	width: 100%;
+	height: inherit;
+	position: absolute;/*
+	background: white;*/
+}
+#section_div{
+	width: 100%;
+	height: 180px;
+	background-color: #1C252B;
+}
+.top_wrap{
+	width: inherit;
+	height: 90px;
+}
+.top_wrap:nth-child(1)
+{
+	border-bottom: 1px solid white;
+}
+.top_nav{
+	height: inherit;
+	width: 50%;
+}
+.tap_menu{
+	width: 100%;
+	height: inherit;
+	margin-left: 30px;
+}
+.tap_menu > li{
+	width: 140px;
+	height: 50px;
+	line-height: 40px;
+	float: left;
+	text-align: center;
+	margin-top: 40px;
+	font-size: 18px;
+	position: relative;
+	cursor: pointer;
+}
+/*.after{
+	
+	height: 10px;
+    background-color: #E76A2F;
+    
+}*/
+.li_after{
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	background-color: #E76A2F;
+	left: 0;
+	top: 10px;
+	opacity: 0;
+}
+/*.tap_menu li:before,.tap_menu li:after{
+  position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 10px;
+    background-color: #E76A2F;
+    content: "";
+     transition: all 0.3s;
+    transform: translateY(0px);
+    z-index: 1;
+    opacity: 0;
+}
+.tap_menu li:hover:before,.tap_menu li:hover:after{
+	opacity: 1;
+    transform: translateY(39px);
+}*/
+.tap_wrap{
+	width: 95%;
+	height: 1150px;
+	/*background: red;*/
+	margin-left: 3%;
+	margin-top: 30px;
+	position: relative;
+}
+.tap_wrap > .img_div >img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 10;
+/*	width: 22%;
+	height: 26%;
+	margin-left: 30px;
+	margin-top: 40px;*/
+}
+.tap_wrap > .img_div{
+	width: 22%;
+	height: 26%;
+	margin-left: 30px;
+	margin-top: 40px;
+	display: inline-block;
+	position: relative;
+}
+.tap_wrap > .img_div > .img_black
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0,0,0,0.0);
+	z-index: 11;	
+}
+.a_div{
+	position: absolute;
+	z-index: 12;
+	width: 100px;
+	height: 100px;
+	background: red;
+/*	width: 35%;
+	height: 20%;
+	left: 33%;
+	top: 43%;
+	font-size: 16px;
+	border-radius: 10px;
+	border: none;
+	background: #E76A2F;
+	cursor: pointer;
+	opacity: 0 ;
+	z-index: 12;*/
+}
+.img_div:hover > .img_black{
+	background-color: rgba(0,0,0,0.7);
+	transition: 0.5s ease;
+}
+.img_div:hover > .img_black > .b_button{
+	opacity: 1;
+	transition: 0.3s ease;
+}
+.infobtn{
+	 /* background:rgb(220,103,49);
+  color:rgb(255,255,255);*/
+  border:none;
+  position:absolute;
+  margin-left: 15px;
+  margin-top: 20px;
+  width: 150px;
+  height:50px;
+  padding:0 2em;
+  cursor:pointer;
+  outline:none;
+  z-index: 101;
+  left: 43.6%;
+  top: 88%;
+}
+
+.second_img
+{
+	width: 200px;
+	height: 200px;
+	background: red;
+}
+.stap{
+	margin-top: -120px;
+	height: 1100px;
+}
+/*#content>section>.ar_info{
+	width: 100%;
+	height: 155px;
+}
+#content>section>.ar_info > h1{
+	color: white;
+	line-height: 155px;
+	text-align: center;
+	font-size: 2.0em;
+}
+.img_info{
+	width: 100%;
+	height: 38%;
+}
+.img_info > img{
+	width: 30%;
+	height: 43%;
+	float: left;
+	margin-left: 40px;
+	margin-top: 30px;
+}
+.img_info1{
+	width:	100%;
+	height: 640px;
+}
+.img_info1 > img{
+	width: 30%;
+	height: 43%;
+	float: left;
+	margin-left: 40px;
+	margin-top: 20px;
+}*/
+footer{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background: blue;
+	left: 0;
+}
+/*.img_info > img:nth-child(1)
+{
+	margin-left: 20px;
+}*/
+/*.img_info >#img_wrap> img{
+	width: 500px;
+	height: 280px;
+	float: left;
+}
+.img_info >#img_wrap:nth-child(1)
+{
+	margin-left: 10px;
+}*/
+
+#con{
+	width: 1400px;
+	height: 2200px;
+	float: left;
+	position: relative;
+	/*	*/
+}
+#remocon
+{
+	width: 90px;
+	height: 2200px;
+	float: left;
+	position: relative;
+	left: 90px;
+
+}
+#content *{
+	color: black;
+}
+figure{
+	margin: 0;
+}
+.curimg{
+	max-width: 100%;
+	width: 250px;
+	height: 250px;
+}
+.carousel{
+	width: 1100px;
+	height: 300px;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+.carousel-slide{
+	width: 250px;
+	padding: 15px;
+}
+
+.carousel-slide figure{
+width: 200px;
+	box-shadow: 0 5px 40px rgba(0,0,0,0.2);
+}
+.carousel-slide figcaption{
+	padding: 15px;
+
+}
+.slick-prev{
+	width: 50px;
+	height: 50px;
+}
+.slick-next{
+	width: 50px;
+	height: 50px;
+}
+.wrap_con{
+	width: 1500px;
+	height: 500px;
+}
+.info
+{
+	width: 500px;
+	height: 60px;
+	margin-top: 50px;
+	margin-left: 100px;
+}
